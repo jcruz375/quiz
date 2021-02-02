@@ -1,17 +1,13 @@
-import styled from 'styled-components'
+/* eslint-disable import/no-unresolved */
+import React from 'react';
+import styled from 'styled-components';
+import { useRouter } from 'next/router';
 import db from '../db.json';
-import Widget from '../src/components/Widget'
-import QuizLogo from '../src/components/QuizLogo'
-import QuizBackground from '../src/components/QuizBackground'
-import Footer from '../src/components/Footer'
-import GitHubCorner from '../src/components/GitHubCorner'
-
-// const BackgroundImage = styled.div`
-//   background-image: url(${db.bg});
-//   flex: 1;
-//   background-size: cover;
-//   background-position: center;
-// `;
+import Widget from '../src/components/Widget';
+import QuizLogo from '../src/components/QuizLogo';
+import QuizBackground from '../src/components/QuizBackground';
+import Footer from '../src/components/Footer';
+import GitHubCorner from '../src/components/GitHubCorner';
 
 export const QuizContainer = styled.div`
   width: 100%;
@@ -25,6 +21,9 @@ export const QuizContainer = styled.div`
 `;
 
 export default function Home() {
+  const router = useRouter();
+  const [name, setName] = React.useState('');
+
   return (
     <QuizBackground backgroundImage={db.bg}>
       <QuizContainer>
@@ -34,7 +33,22 @@ export default function Home() {
             <h1>{db.title}</h1>
           </Widget.Header>
           <Widget.Content>
-            <p>{db.description}</p>
+            <form
+              onSubmit={(event) => {
+                event.preventDefault();
+                router.push(`/quizz?name=${name}`);
+              }}
+            >
+              <input
+                onChange={(event) => {
+                  setName(event.target.value);
+                }}
+                placeholder="diz seu nome"
+              />
+              <button type="submit" disabled={name.length === 0}>
+                {`jogar ${name}`}
+              </button>
+            </form>
           </Widget.Content>
         </Widget>
 
@@ -51,4 +65,3 @@ export default function Home() {
     </QuizBackground>
   );
 }
-
