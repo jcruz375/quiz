@@ -7,7 +7,6 @@ import QuizContainer from '../src/components/QuizContainer';
 import QuizLogo from '../src/components/QuizLogo';
 import QuizBackground from '../src/components/QuizBackground';
 import Footer from '../src/components/Footer';
-import GitHubCorner from '../src/components/GitHubCorner';
 import Input from '../src/components/Input/index';
 import Button from '../src/components/Button/index';
 
@@ -52,7 +51,6 @@ export default function Home() {
         </Widget>
         <Footer />
       </QuizContainer>
-      <GitHubCorner projectUrl="https://github.com/omariosouto" />
     </QuizBackground>
   );
 }
