@@ -5,24 +5,24 @@
 	"questions": [
 		{
 			"image": "https://media.giphy.com/media/xUOxf3yDKCuwpOlT3i/giphy.gif",
-			"title": "Como fazer um seletor por id via CSS?",
+			"title": "quem é o maior goleiro da história do corinthians",
 			"description": "Essa é pra aquecer",
 			"answer": 2,
 			"alternatives": [
-				".elemento",
-				"*elemento",
-				"#elemento",
-				"%elemento"
+				"Julio Cesar",
+				"Ronaldo giovaneli",
+				"Cássio",
+				"Dida"
 			]
 		},
 		{
 			"image": "https://media.giphy.com/media/13FrpeVH09Zrb2/giphy.gif",
-			"title": "Como fazer um background gradiente com css?",
+			"title": "qual jogador fez o gol do título do campeonato paulista 2019",
 			"description": "Faz tempo em haha",
 			"answer": 0,
 			"alternatives": [
-				"background: linear-gradient(#e66465, #9198e5);",
-				"background: gradient(#e66465, #9198e5);"
+				"Vagner Love",
+				"Mauro Boselli"
 			]
 		}
 	],
